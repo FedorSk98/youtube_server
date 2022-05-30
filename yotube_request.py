@@ -10,6 +10,7 @@ class YoutubeRequest:
 
         you_tube = YouTube(base_url)
         data_video = {
+            'video_id': you_tube.video_id,
             'title': you_tube.title,
             'author': you_tube.author,
             'photo': you_tube.thumbnail_url,
