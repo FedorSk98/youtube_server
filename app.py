@@ -15,13 +15,12 @@ def search():
     if url_video is None:
         data_video = {'server_status': 404, 'result': "Not found video..."}
     else:
-        data_video = youtube_request.request_data(url_video)
+        data_video = YoutubeRequest().request_data(url_video)
 
     return json.dumps(data_video, indent=2), 201, {'Content-Type': 'application/json'}
 
 
 if __name__ == "__main__":
-    youtube_request = YoutubeRequest()
     app.run()
 
 
